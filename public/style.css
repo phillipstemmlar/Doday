@@ -9,19 +9,18 @@
 	--footer-color: white;
 	--footer-height: 45px;
 
-	--box-opacity: 1;
-	--box-item-opacity: 1;
+	--box-bg-color: rgb(0,0,0);
+	--box-bg-color1: rgb(2255,255,255);
 
-	--box-bg-color: rgba(0,0,0, var(--box-opacity));
-	--box-bg-color1: rgba(2255,255,255, var(--box-opacity));
+	--box-item-color: rgb(251, 196, 144);
+	--box-item-color-hover: rgb(51, 196, 144);
+	--box-item-important-color: rgb(205, 141, 123);
 
-	--box-item-color: rgba(251, 196, 144, var(--box-item-opacity));
-	--box-item-color-hover: rgba(51, 196, 144, var(--box-item-opacity));
-	--box-item-important-color: rgba(205, 141, 123, var(--box-item-opacity));
+	--box-item-done-color: rgb(104, 116, 102);
+	--box-item-done-color-hover: rgb(0,100,0);
+	--box-item-done-important-color: rgb(205, 141, 123);
 
-	--box-item-done-color: rgba(104, 116, 102, var(--box-item-opacity));
-	--box-item-done-color-hover: rgba(0,100,0, var(--box-item-opacity));
-	--box-item-done-important-color: rgba(205, 141, 123, var(--box-item-opacity));
+	--box-item-color-editing: rgb(144, 203, 251);
 
 	--box-color1: rgb(0,0,0);
 	--box-color2: rgb(255,255,255);
@@ -120,10 +119,6 @@ body{
 	}
 
 
-
-
-
-
 	.box > .box-list > .box-item{
 		position: relative;
 		display: flex;
@@ -147,11 +142,19 @@ body{
 		cursor: grabbing;
 	}
 
-	.box > .box-list > .box-item:hover{
-		
+	.box > .box-list > .box-item > span > span{
+		cursor: pointer;
 	}
 
+	.box > .box-list > .box-item > span > span.itemEditing{
+		cursor: text;
+	}
 
+	.box > .box-list > .box-item > span > span.itemEditing::selection,
+	.box > .box-list > .box-item > span > span.itemEditing::-moz-selection {
+		background: black;
+		color: white;
+	}
 
 	#open.box > .box-list > .box-item{
 		background-color: var(--box-item-color);
@@ -161,6 +164,7 @@ body{
 	}
 	#open.box > .box-list > .box-item.important{
 		background-color: var(--box-item-important-color);
+		/* background-color: var(--box-item-color-editing); */
 	}
 
 	#closed.box > .box-list > .box-item,
@@ -178,7 +182,7 @@ body{
 
 	#closed.box > .box-list > .box-item > .strike{
 		position: absolute;
-		top: 17px;
+		top: 20px;
 		left: 15px;
 		width: calc( 100% - 30px);
 		height: 2px;

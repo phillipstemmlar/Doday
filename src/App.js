@@ -2,6 +2,7 @@ import React from 'react';
 import Box from './Box';
 import Footer from './Footer';
 
+let n = 0;
 const openValues = [
   {module:"COS 344", name:"Assignment 3", due:"6 May 2020", isImportant:"false"},
   {module:"COS 341", name:"Practical 01", due:"7 May 2020", isImportant:"false"},
@@ -13,12 +14,15 @@ const openValues = [
   {module:"COS 301", name:"Semester Test 1", due:"22 May 2020", isImportant:"true"},
   {module:"COS 341", name:"Practical 01", due:"7 May 2020", isImportant:"false"},
 ];
+for(let i = 0; i < openValues.length; ++i) {openValues[i].id = "item-"+n;n++}
+
 const closedValues = [
   {module:"COS 344", name:"Assignment 3", due:"6 May 2020", isImportant:"false"},
   {module:"COS 341", name:"Practical 01", due:"7 May 2020", isImportant:"false"},
   {module:"COS 301", name:"Semester Test 1", due:"22 May 2020", isImportant:"true"},
   {module:"COS 344", name:"Assignment 3", due:"6 May 2020", isImportant:"false"},
 ];
+for(let i = 0; i < closedValues.length; ++i) {closedValues[i].id = "item-"+n;n++}
 
 function App(){
   return (
