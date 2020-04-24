@@ -9,7 +9,7 @@
 	--footer-color: white;
 	--footer-height: 45px;
 
-	--box-opacity: 0;
+	--box-opacity: 1;
 	--box-item-opacity: 1;
 
 	--box-bg-color: rgba(0,0,0, var(--box-opacity));
@@ -59,7 +59,7 @@ body{
 	background-color: var(--page-bg-color);
 }
 
-#page{
+#root{
 
 	position: relative;
 	min-height: 100vh;
