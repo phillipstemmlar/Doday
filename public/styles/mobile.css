@@ -1,0 +1,14 @@
+@media screen and (max-width: 400px){
+	.box{
+		border: 1px solid green;
+		
+	}
+	
+	.box > * {
+		border: 1px solid blue;
+	}
+	
+	.box > .box-list > *{
+		border: 1px solid red;
+	}
+}
