@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from './Box';
 import Footer from './Footer';
+import ControlBar from './ControlBar';
 
 let n = 0;
 const openValues = [
@@ -30,6 +31,7 @@ function App(){
       <div id="body">
         <Box state="open" items={openValues}/>    
         <Box state="closed" items={closedValues}/>    
+        <ControlBar />
       </div>
       <Footer author="Phillip Schulze"/>
     </div>
