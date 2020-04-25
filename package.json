@@ -12,8 +12,8 @@
     "sortablejs": "^1.10.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start1": "react-scripts start",
+    "start": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
