@@ -9,11 +9,13 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "sortablejs": "^1.10.2"
+    "sortablejs": "^1.10.2",
+    "serve": "11.3.0"
   },
   "scripts": {
-    "start1": "react-scripts start",
-    "start": "react-scripts build",
+    "start": "serve -s build",
+    "start-r": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -112,7 +112,7 @@ body{
 #addItem_important{
 	flex: 0;
 	flex-basis: 100px;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	/* opacity: 0.1; */
 	display: flex;
 	justify-content: center;
